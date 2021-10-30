@@ -40,6 +40,17 @@ int DaysInYearRange(int year1, int year2)
 	return sum;
 }
 
+int SecondsInHour(int hour)
+{
+	return 60 * hour;
+}
+
+bool IsYearOfApocalypse(int year)
+{
+	return (year == 1992 || year == 2005 || year == 2011);
+		
+}
+
 int main()
 {
 
