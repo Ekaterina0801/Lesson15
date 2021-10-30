@@ -25,6 +25,20 @@ string LaterInYear(int d1, int m1, int d2, int m2)
 	return s;
 }
 
+int DaysInYear(int year)
+{
+	if (IsLeap(year))
+		return 366;
+	else return 365;
+}
+
+int DaysInYearRange(int year1, int year2)
+{
+	int sum = 0;
+	for (int i = year1; i <= year2; i++)
+		sum += DaysInYear(i);
+	return sum;
+}
 
 int main()
 {
