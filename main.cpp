@@ -11,11 +11,20 @@ bool IsLeap(int year)
 	return flag;
 }
 
-//сколько секунд в минуте
-int SecondsInMinute()
+string LaterInYear(int d1, int m1, int d2, int m2)
 {
-	return 60;
+	string s = "";
+	if (m1 == m2)
+		if (d1 > d2)
+			s = to_string(d1) + "." + to_string(m1);
+		else
+			s = to_string(d2) + "." + to_string(m2);
+	else if (m1 > m2)
+		s = to_string(d1) + "." + to_string(m1);
+	else s = to_string(d2) + "." + to_string(m2);
+	return s;
 }
+
 
 int main()
 {
